@@ -1,4 +1,5 @@
 module.exports = {
+  base: '/', // 比如你的仓库是test
   title: '前端足迹',
   description: '前端足迹,记录技术点',
   // 注入到当前页面的 HTML <head> 中的标签
