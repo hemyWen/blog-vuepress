@@ -21,7 +21,7 @@ module.exports = {
       },
       { text: 'Github', link: 'https://github.com' },
     ],
-
+    //git remote add origin https://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@github.com/hemyWen/hemyWen.github.io.git 
     sidebar: {
       '/articles': [
         {
