@@ -1,15 +1,19 @@
 ---
 home: true
 heroImage: /logo.png
-heroText: 前端记录
+heroText: 前端足迹
 tagline: 一点一滴都是进步
 actionText: 马上进入 →
 actionLink: /articles/javascript/async.md
 features:
-- title: 简洁至上
-  details: 以 Markdown 为中心的项目结构，以最少的配置帮助你专注于写作。
-- title: Vue驱动
-  details: 享受 Vue + webpack 的开发体验，在 Markdown 中使用 Vue 组件，同时可以使用 Vue 来开发自定义主题。
-- title: 高性能
-  details: VuePress 为每个页面预渲染生成静态的 HTML，同时在页面被加载的时候，将作为 SPA 运行。
+- title: javascript
+  details: 了解高阶函数、EventLoop、异步编程等,手写源码。
+- title: Vue
+  details: 高可用组件设计、组件分享、vue源码。
+- title: TS
+  details: 常用用法、高级用法、常用设计模式、实战。
+- title: CSS
+  details: 盒模型、常见布局、响应式、CSS3新特性、实用技巧
+- title: webpack
+  details: 基本配置、常用loader、插件、手写loader、性能优化
 ---

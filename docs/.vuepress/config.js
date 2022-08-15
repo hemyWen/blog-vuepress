@@ -1,6 +1,6 @@
 module.exports = {
-  title: 'Hello VuePress',
-  description: 'Just playing around',
+  title: '前端足迹',
+  description: '前端足迹,记录技术点',
   // 注入到当前页面的 HTML <head> 中的标签
   head: [
     ['link', { rel: 'icon', href: '/logo.png' }],  //浏览器的标签栏的网页图标
@@ -11,7 +11,13 @@ module.exports = {
   themeConfig: {
     logo: '/logo.png',
     nav: [
-      { text: '百度', link: 'https://baidu.com' },
+      {
+        text: '分类',
+        items: [
+          { text: '文章', link: '/articles/javascript/async' },
+          { text: '项目', link: '/projects/hemy-progress' },
+        ]
+      },
       { text: 'Github', link: 'https://github.com' },
     ],
 
@@ -19,7 +25,7 @@ module.exports = {
       '/articles': [
         {
           title: 'javascript',
-          collapsable: true,
+          collapsable: false,
           children: [
             '/articles/javascript/async',
             '/articles/javascript/promise',
@@ -27,7 +33,7 @@ module.exports = {
         },
         {
           title: 'html',
-          collapsable: true,
+          collapsable: false,
           children: [
             '/articles/html/div',
           ]
@@ -35,15 +41,15 @@ module.exports = {
       ],
       '/projects': [
         {
-          title: 'vue进度条',
-          collapsable: true,
+          title: '进度条',
+          collapsable: false,
           children: [
-            '/projects/hemy-progress',
+            ['/projects/hemy-progress', '在vue中使用'],
           ]
         },
         {
           title: '倒计时组件',
-          collapsable: true,
+          collapsable: false,
           children: [
             '/projects/hemy-count',
           ]
