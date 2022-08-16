@@ -206,12 +206,12 @@ title: 进度条
     :strokeColor="['#6f7ad3', '#1989fa', '#5cb87a', '#e6a23c', '#f56c6c']"
   />
 </div>
-<ClientOnly>
+
 <div>
   <button v-on:click="decrease">- </button>
   <button style="margin-left: 10px" v-on:click="increase">+</button>
 </div>
-</ClientOnly>
+
 
 7. 复杂图形
 
@@ -335,7 +335,7 @@ title: 进度条
   />
 </div>
 
-## 组件属性
+## API
 <table>
   <tr>
     <th>表格</th>
@@ -358,27 +358,21 @@ title: 进度条
     <td>进度条百分比</td>
     <td>100</td>
   </tr>
-    <tr>
+  <tr>
     <td>fillColor</td>
     <td>String</td>
     <td>否</td>
     <td>闭合图形填充颜色,type!==line生效</td>
     <td>none</td>
   </tr>
-   <tr>
+  <tr>
     <td>strokeColor</td>
     <td>String,Function,Array</td>
     <td>否</td>
-    <td>进度条颜色,可接受字符串,参数为percentage的函数,数组,
-        ['#f56c6c','#e6a23c','#5cb87a','#1989fa','#6f7ad3']
-        或者
-        [
-          {color: '#f56c6c', percentage: 20},
-          {color: '#e6a23c', percentage: 40},
-          {color: '#5cb87a', percentage: 60},
-          {color: '#1989fa', percentage: 80},
-          {color: '#6f7ad3', percentage: 100}
-        ]
+    <td>
+      进度条颜色,可接受字符串,参数为percentage的函数,数组, ['#f56c6c','#e6a23c','#5cb87a','#1989fa','#6f7ad3'] 或者 [
+      {color: '#f56c6c', percentage: 20}, {color: '#e6a23c', percentage: 40}, {color: '#5cb87a', percentage: 60},
+      {color: '#1989fa', percentage: 80}, {color: '#6f7ad3', percentage: 100} ]
     </td>
     <td>#409eff</td>
   </tr>
@@ -389,14 +383,14 @@ title: 进度条
     <td>背景进度条颜色</td>
     <td>#eee</td>
   </tr>
-    <tr>
+  <tr>
     <td>backStrokewidth</td>
     <td>Number</td>
     <td>否</td>
     <td>背景进度条宽度</td>
     <td>5</td>
   </tr>
-   <tr>
+  <tr>
     <td>textStyle</td>
     <td>Object</td>
     <td>否</td>
@@ -410,7 +404,7 @@ title: 进度条
     <td>是否显示文字</td>
     <td>true</td>
   </tr>
-   <tr>
+  <tr>
     <td>format</td>
     <td>function(percentage)</td>
     <td>否</td>
@@ -445,14 +439,14 @@ title: 进度条
     <td>环形条线帽,butt:正常结尾,round:圆润,square:两端为方形</td>
     <td>round</td>
   </tr>
-   <tr>
+  <tr>
     <td>strokeLinejoin</td>
     <td>String</td>
     <td>否</td>
     <td>线段连接处的样式,miter:正常连接,round:圆润,bevel:切除连接处的尖尖部分</td>
     <td>miter</td>
   </tr>
-    <tr>
+  <tr>
     <td>strokeMiterlimit</td>
     <td>Number</td>
     <td>否</td>
@@ -501,7 +495,7 @@ title: 进度条
     <td>自定义图形路径的总长度,如果存在，路径将进行缩放，以便计算各点相当于此值的路径长度</td>
     <td>1000</td>
   </tr>
-   <tr>
+  <tr>
     <td>d</td>
     <td>String</td>
     <td>否</td>
@@ -509,33 +503,34 @@ title: 进度条
     <td></td>
   </tr>
 </table>
+
+
+
 <script>
-import HemyProgress from 'hemy-progress';
-export default {
-  components:{HemyProgress},
-  data(){
-    return {
-      percentage:60,
-      p1:0
-    }
-  },
-  methods: {
-    decrease() {
-      this.p1 -= 10
-      if (this.p1 <= 0) {
-        this.p1 = 0
+  import HemyProgress from 'hemy-progress';
+  export default {
+    components:{ HemyProgress },
+    data(){
+      return {
+        percentage:60,
+        p1:0
       }
     },
-    increase() {
-      this.p1 += 10
-      if (this.p1 >= 100) {
-        this.p1 = 100
+    methods: {
+      decrease() {
+        this.p1 -= 10
+        if (this.p1 <= 0) {
+          this.p1 = 0
+        }
+      },
+      increase() {
+        this.p1 += 10
+        if (this.p1 >= 100) {
+          this.p1 = 100
+        }
       }
     }
-  }
-};
-
-  
+  };
 </script>
 <style>
 .progress-animation .progress-path__item {
