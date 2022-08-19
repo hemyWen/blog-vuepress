@@ -2,7 +2,7 @@
 title: 在vue中使用
 --- 
 ## 介绍
-**使用svg制作进度条,线条形,环形,扇形,矩形,椭圆的常规图形进度条,也可以制作其他复杂图形的进度条,三角形,多边形,自定义图形等**
+**使用svg制作vue进度条,线条形,环形,扇形,矩形,椭圆的常规图形进度条,也可以制作其他复杂图形的进度条,三角形,多边形,自定义图形等**
 ## 源码地址   
     https://github.com/hemyWen/hemy-progress
 ## 安装使用
@@ -120,7 +120,23 @@ title: 在vue中使用
 <hemy-progress type="ellipse" backStrokeColor="#445469" :percentage="20" :width="400" />
 ```
 <hemy-progress type="ellipse" backStrokeColor="#445469" :percentage="20" :width="400" />
-6. 自定义动态颜色
+6. 虚线样式
+- isDashed:是否为虚线
+- isBackDashed:背景是否为虚线
+- dashedLength:虚线长度
+- dashedDistance:虚线间隔
+```html
+<hemy-progress type='line' :percentage='30' :isDashed='true' />
+<hemy-progress style='margin-top:10px' type='line' :percentage='40' :dashedLength='10' :dashedDistance='2' strokeColor='red'  :isDashed='true' :isBackDashed='false' />
+<hemy-progress :width='150'  :isDashed='true' type='circle' :dashedLength='10' :dashedDistance='2' :percentage='50'  />
+<hemy-progress   :isDashed='true' type='rect' :dashedLength='10' :dashedDistance='2' :percentage='50'  />
+```
+<hemy-progress type='line' :percentage='30' :isDashed='true' />
+<hemy-progress style='margin-top:10px' type='line' :percentage='40' :dashedLength='10' :dashedDistance='2' strokeColor='red'  :isDashed='true' :isBackDashed='false' />
+<hemy-progress :width='150'  :isDashed='true' type='circle' :dashedLength='10' :dashedDistance='2' :percentage='50'  />
+<hemy-progress   :isDashed='true' type='rect' :dashedLength='10' :dashedDistance='2' :percentage='50'  />
+
+7. 自定义动态颜色
 ```html
   <hemy-progress
     class="circle-item"
@@ -213,7 +229,7 @@ title: 在vue中使用
 </div>
 
 
-7. 复杂图形
+8. 复杂图形
 
 - pathLength  自定义图形路径的总长度,如果存在，路径将进行缩放，以便计算各点相当于此值的路径长度
 - d 当type=path,图形的定义路径,必填
@@ -271,7 +287,7 @@ title: 在vue中使用
   />
 </div>
 
-8. 配合动画
+9. 配合动画
 
 ```html 
 <hemy-progress
@@ -348,7 +364,7 @@ title: 在vue中使用
     <td>type</td>
     <td>String</td>
     <td>否</td>
-    <td>进度条类型,line=线条,circle=环形</td>
+    <td>进度条类型,line=线条,circle=环形,ellipse=椭圆,rect=矩形,path=自定义图形</td>
     <td>line</td>
   </tr>
   <tr>
@@ -429,7 +445,7 @@ title: 在vue中使用
     <td>strokeWidth</td>
     <td>Number</td>
     <td>否</td>
-    <td>环形宽度,type=circle时生效</td>
+    <td>进度条宽</td>
     <td>10</td>
   </tr>
   <tr>
@@ -502,9 +518,39 @@ title: 在vue中使用
     <td>当type=path,图形的定义路径,必填</td>
     <td></td>
   </tr>
+  <tr>
+    <td>isDashed</td>
+    <td>Boolean</td>
+    <td>否</td>
+    <td>进度条是否为虚线</td>
+    <td>false</td>
+  </tr>
+  <tr>
+    <td>isBackDashed</td>
+    <td>Boolean</td>
+    <td>否</td>
+    <td>背景是否为虚线</td>
+    <td>true</td>
+  </tr>
+  <tr>
+    <td>dashedLength</td>
+    <td>Number</td>
+    <td>否</td>
+    <td>虚线长度</td>
+    <td>5</td>
+  </tr>
+  <tr>
+    <td>dashedDistance</td>
+    <td>Number</td>
+    <td>否</td>
+    <td>虚线间隔</td>
+    <td>5</td>
+  </tr>
 </table>
 
-
+## 更新记录
+### 2022.08.18  <Badge text="1.2.2" type="tip"/>
+- 新增虚线样式
 
 <script>
   import HemyProgress from 'hemy-progress';

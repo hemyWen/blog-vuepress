@@ -12,9 +12,8 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "hemy-progress": "^1.2.2",
     "vuepress": "^1.9.7"
   },
-  "dependencies": {
-    "hemy-progress": "^1.1.1"
-  }
+  "dependencies": {}
 }
