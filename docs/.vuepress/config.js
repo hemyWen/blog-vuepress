@@ -21,6 +21,7 @@ module.exports = {
       },
       { text: 'Github', link: 'https://github.com' },
     ],
+
     //git remote add origin https://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@github.com/hemyWen/hemyWen.github.io.git 
     sidebar: {
       '/articles': [
@@ -48,13 +49,13 @@ module.exports = {
             ['/projects/hemy-progress', '在vue中使用'],
           ]
         },
-        {
-          title: '倒计时组件',
-          collapsable: false,
-          children: [
-            '/projects/hemy-count',
-          ]
-        },
+        // {
+        //   title: '倒计时组件',
+        //   collapsable: false,
+        //   children: [
+        //     '/projects/hemy-count',
+        //   ]
+        // },
       ]
     }
 
