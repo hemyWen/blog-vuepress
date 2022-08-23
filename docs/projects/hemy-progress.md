@@ -101,8 +101,8 @@ title: 在vue中使用
 ```
 
 ### 7. 自定义动态颜色
-```html
 - strokeColor传入一个颜色数组
+```html
   <hemy-progress
     class="circle-item"
     type="circle"
@@ -410,9 +410,7 @@ title: 在vue中使用
 - 新增虚线样式
 
 <script>
-import HemyProgress from 'hemy-progress'
   export default {
-  components:{HemyProgress},
     data(){
       return {
         percentage:60,

@@ -11,6 +11,7 @@ module.exports = {
   },
   themeConfig: {
     logo: '/logo.png',
+    sidebarDepth: 3,
     nav: [
       {
         text: '分类',
@@ -29,8 +30,9 @@ module.exports = {
           title: 'javascript',
           collapsable: false,
           children: [
-            '/articles/javascript/async',
-            '/articles/javascript/promise',
+            ['/articles/javascript/async', 'async'],
+            ['/articles/javascript/promise', 'promise'],
+            ['/articles/javascript/手写源码系列', '手写源码系列']
           ]
         },
         {
