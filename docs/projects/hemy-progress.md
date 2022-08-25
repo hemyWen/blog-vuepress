@@ -403,10 +403,19 @@ title: 在vue中使用
     <td>虚线间隔</td>
     <td>5</td>
   </tr>
+  <tr>
+    <td>isTransition</td>
+    <td>Boolean</td>
+    <td>否</td>
+    <td>是否有过度动画</td>
+    <td>true</td>
+  </tr>
 </table>
 
 ## 更新记录
-### 2022.08.18  <Badge text="1.2.2" type="tip"/>
+#### 2022.08.24  <Badge text="1.3.0" type="tip"/>
+- 新增属性:是否过渡动画
+#### 2022.08.18  <Badge text="1.2.2" type="tip"/>
 - 新增虚线样式
 
 <script>

@@ -28,7 +28,7 @@ module.exports = {
       '/articles': [
         {
           title: 'javascript',
-          collapsable: false,
+          collapsable: true,
           children: [
             ['/articles/javascript/async', 'async'],
             ['/articles/javascript/promise', 'promise'],
@@ -37,7 +37,7 @@ module.exports = {
         },
         {
           title: 'html',
-          collapsable: false,
+          collapsable: true,
           children: [
             '/articles/html/div',
           ]
@@ -46,7 +46,7 @@ module.exports = {
       '/projects': [
         {
           title: '进度条',
-          collapsable: false,
+          collapsable: true,
           children: [
             ['/projects/hemy-progress', '在vue中使用'],
           ]
